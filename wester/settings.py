@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure--ih98g8*zv09heuu_fg*t+fbyj9&=s2jvha_#+gpkpk41d*=67'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 # if DEBUG:
 #     from wester.locale_settings import *
