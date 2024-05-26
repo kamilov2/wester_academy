@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q531W4CYEF"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-Q531W4CYEF');
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5LJBPD4Q');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="yandex-verification" content="a8421ade20184c70" />
+    <!-- meta -->
+    <link rel="icon" href="{% static 'assets/img/favicon.png' %}" type="image/x-icon">
+
+    <meta name="description"
+        content="Wester ta'lim markazi - dasturlash, dizayn va marketingda o'qitish. Soha bo'yicha tajribaga ega mutaxassislar tayyorlash.">
+    <meta name="keywords" content="Wester ta'lim markazi, o'qitish, dasturlash, dizayn, marketing.">
+    <meta name="image_src" content="{% static 'assets/img/11111.png' %}" /> 
+
+    <meta property="og:title" content="Wester ta'lim markazi" />
+    <meta property="og:description"
+        content="Wester ta'lim markazi - dasturlash, dizayn va marketingda o'qitish. Soha bo'yicha tajribaga ega mutaxassislar tayyorlash." />
+    <meta property="og:image" content="{% static 'assets/img/11111.png' %}" />
+    <meta property="og:url" content="https://westeracademy.uz" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Wester Academy" />
+    <meta property="og:locale" content="ru_RU" />
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Wester Academy">
+    <meta name="twitter:description"
+        content="Wester ta'lim markazi - dasturlash, dizayn va marketingda o'qitish. Soha bo'yicha tajribaga ega mutaxassislar tayyorlash.">
+    <meta name="twitter:image"
+        content="data:image/jpeg;base64,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">
+
+    <!-- end meta -->
+
+    <title>WESTER - ACADEMY</title>
+
+
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- css link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- js link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- All css -->
+    <link rel="stylesheet" href="{% static 'assets/scss/css/index.css' %}" />
+    <style>
+        .notification-bar {
+            display: none;
+            position: fixed;
+            background-color: #292929;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 95px;
+            color: rgb(255, 255, 255);
+            padding: 15px;
+            text-align: center;
+            z-index: 1000;
+        }
+
+        .messages {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .messages li {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .error {
+            color: #ffffff;
+        }
+
+        .success {
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="notification-bar" id="notificationBar">
+        {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <li class="{{ message.tags }}"><b>{{ message }}</b></li>
+            {% endfor %}
+        </ul>
+        <script>
+            var messagesContainer = document.querySelector('.notification-bar');
+            messagesContainer.style.display = 'block';
+
+            setTimeout(function () {
+                messagesContainer.style.display = 'none';
+            }, 4000); 
+        </script>
+        {% endif %}
+    </div>
+    <!-- Header start  -->
+    <header class="header">
+        <div class="container">
+            <nav class="container__nav">
+                <div class="logo">
+                    <a href="#">
+                        <img src="{% static 'assets/img/11111.png' %}" alt="logo" loading="lazy">
+                    </a>
+                </div>
+                <div class="container__nav__number">
+                    <a href="tel:998932609010"><img src="{% static 'assets/img/phone.svg' %}" alt=""> +998 93-260-90-10</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- Header End  -->
+
+
+    <main>
+        <!-- Intro Start  -->
+        <section class="intro">
+            <div class="container">
+                <div class="container__list">
+                    <div class="container__list__item">
+                        <h3 class="container__list__item__title">Zamonaviy kasblar orqali o’z karyerangizni quring , biz
+                            bilan IT mutaxassisiga aylaning.</h3>
+                        <a class="container__list__item__btn" href="#register">Kasb tanlash</a>
+                    </div>
+
+                    <div class="container__list__img">
+                        <img src="{% static 'assets/img/intro.png' %}" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Intro End -->
+
+        <!-- Pop-Up Start -->
+
+        <div id="pop-up-close" onclick="closeModal()"></div>
+        <div class="pop-up" id="pop-up">
+            <form class="pop-up__form" action="{% url 'main:consulting' %}" method="post">
+                {% csrf_token %}
+                <div class="pop-up__form__top">
+                    <h3>IT ga birinchi qadam shu yerdan boshlanadi!</h3>
+                    <p onclick="closeModal()">
+                        <img src="{% static 'assets/img/x.png' %}" alt="">
+                    </p>
+                </div>
+                <p class="pop-up__form__subtitle">Bepul konsultatsiyaga yoziling.</p>
+
+                <input class="pop-up__form__inp" type="text" name="name" placeholder="Ismingiz" required>
+                <input class="pop-up__form__inp" type="text" name="number" placeholder="Telefon raqam"
+                    pattern="^998[0-9]{9}$" required value="998"
+                    title="Telefon raqamni kiriting, masalan: 9989XXXXXXXX">
+                <input class="pop-up__form__inp" type="text" name="age" placeholder="Yosh:" required
+                    pattern="[0-9]{1,2}" title="Yosh chegarasi 9-30">
+                <button class="pop-up__form__btn" type="submit">Yuborish</button>
+            </form>
+        </div>
+
+        <!-- Pop-Up End -->
+
+        <!-- Attention start  -->
+        <section class="attention">
+            <div class="container">
+                <h2 class="container__title">E’tibor bering !</h2>
+                <ul class="container__list">
+                    <li class="container__list__item">
+                        <div class="container__list__item__div">
+                            <img src="{% static 'assets/img/bookmark.png' %}" alt="">
+                            <p class="container__list__item__div__title">Har bir o’quvchimiz uchun personal yondashuv
+                            </p>
+                        </div>
+                        <p class="container__list__item__text">Tendensiyalarga amal qilgan holatda bilimlar berish va
+                            suhbat jarayonlariga tayyorlash , real loyihalarga jalb qilish, tajribaga asoslangan kasbiy
+                            maslahatlar berish</p>
+                    </li>
+                    <li class="container__list__item">
+                        <h3 class="container__list__item__div__title">Ta’limdagi ko’p yillik tajriba va unikal o’quv
+                            metodikalari</h3>
+                        <img src="{% static 'assets/img/5.png' %}" alt="">
+                    </li>
+                    <li class="container__list__item">
+                        <div class="container__list__item__div">
+                            <img src="{% static 'assets/img/mail.png' %}" alt="">
+                            <p class="container__list__item__div__title">Hamkor tashkilotlarga amaliyot va ishga
+                                yo’naltirish
+                        </div>
+                        </h3>
+                        <p class="container__list__item__text">Amaliyot orqali bitiruvchi o’quvchilarni ish bilan
+                            ta’minlash va ularni birinchi daromadlarini topishda ko’maklashish</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- Attention End -->
+
+        <!-- Kurs-info Start  -->
+        <section class="kurs-info">
+            <div class="container">
+                <div class="list">
+                    <div class="list__left">
+                        <img src="{% static 'assets/img/kurs-bc.png' %}" alt="">
+                        <p>Kursni muvaffaqiyatli tamomlaganingizdan so‘ng siz daromad topishingiz va jamoada
+                            ishlashingiz mumkin.
+                        </p>
+                    </div>
+                    <div class="list__right">
+                        <ul class="list__right__list">
+                            <li>
+                                <h3>Kurslar haqida slayd bilan tanishing</h3>
+                                <p>Slayd orqali siz IT sohasi va bizda mavjud bo’lgan TOP kasblar haqida bilib
+                                    olishingiz mumkin bo’ladi.</p>
+                                <a href="{% static 'assets/img/2050f083-4639-4807-8144-5c7983359bbb.pdf' %}"
+                                    style="font-size:1.3rem;" taget="_blank">+</a>
+                            </li>
+                            <li>
+                                <h3>O’zingizga qulay usulda o’qing</h3>
+                                <b>Standart</b>
+                                <b>BootCamp</b>
+                                <a href="#register" style="font-size:1.3rem;">+</a>
+                            </li>
+                            <li>
+                                <h3>Kurslar dasturi bozor talabiga javob beradi</h3>
+                                <span>
+                                    <img src="{% static 'assets/img/kurs1.png' %}" alt="" loading="lazy">
+                                    <img src="{% static 'assets/img/kurs2.png' %}" alt="" loading="lazy">
+                                    <img src="{% static 'assets/img/kurs3.png' %}" alt="" loading="lazy">
+                                    <img src="{% static 'assets/img/kurs4.png' %}" alt="" loading="lazy">
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Kurs-info End -->
+
+
+        <!-- Kurs Start -->
+        <section id="register" class="kurs">
+            <div class="container">
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Kursga ro’yhatdan o’tish</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+
+
+                                <form class="modal-body__from" id="myForm" action="{% url 'main:create_student' %}"
+                                    method="post">
+                                    {% csrf_token %}
+                                    <div class="modal-body__from__div">
+                                        <button class="course-btn" value="Bepul maslahat uchun ariza qoldirish">Bepul
+                                            maslahat uchun ariza qoldirish</button>
+                                        <button class="course-btn"
+                                            value="Fron-tend kursi uchun ariza"><span>Fron-tend</span> kursi uchun
+                                            ariza</button>
+                                        <button class="course-btn"
+                                            value="Back-end kursi uchun ariza"><span>Back-end</span> kursi uchun
+                                            ariza</button>
+                                        <button class="course-btn" value="Dizayn kursi uchun ariza"><span>Dizayn</span>
+                                            kursi uchun ariza</button>
+                                        <button class="course-btn"
+                                            value="Foundation kursi uchun ariza"><span>Foundation</span> kursi uchun
+                                            ariza</button>
+                                        <button class="course-btn"
+                                            value="Marketing kursi uchun ariza"><span>Marketing</span> kursi uchun
+                                            ariza</button>
+                                    </div>
+                                    <b>Formani to'ldiring</b>
+                                    <input type="text" name="name" placeholder="Ism: " required>
+                                    <input type="tel" id="phone" name="phone" placeholder="Telefon raqam"
+                                        pattern="^998[0-9]{9}$" required value="998"
+                                        title="Telefon raqamni kiriting, masalan: 9989XXXXXXXX">
+                                    <input type="text" id="age" name="age" placeholder="Yosh:" required
+                                        pattern="[0-9]{1,2}" title="Yosh chegarasi 9-30">
+                                    <button class="btn" type="submit">Ariza yuborish</button>
+                                    <p>Tugmani bosish orqali men ma'lumotlarimni qonunga muvofiq qayta ishlashga
+                                        roziman.</p>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h2 class="container__title">Ta’lim yo’nalishlari</h2>
+                <div class="container__list">
+                    <div class="container__list__item">
+                        <h3 class="container__list__item__title">Front-End</h3>
+                        <ul class="container__list__item__frem">
+                            <li>
+                                <img src="/static/assets/img/html_5.png" alt="" loading="lazy">
+                            </li>
+                            <li>
+                                <img src="/static/assets/img/css_3.svg" alt="" loading="lazy">
+                            </li>
+                            <li>
+                                <img src="/static/assets/img/js.png" alt="" loading="lazy">
+                            </li>
+                            <li>
+                                <img src="/static/assets/img/react.png" alt="" loading="lazy">
+                            </li>
+                            <li>
+                                <img src="/static/assets/img/vue.png" alt="" loading="lazy">
+                            </li>
+                        </ul>
+                        <div class="container__list__item__teach">
+                            <img class="container__list__item__teach__img1" src="{% static 'assets/img/frontend.png' %}"
+                                style="object-fit: cover;" alt="" loading="lazy">
+                            <img class="container__list__item__teach__img2" src="{% static 'assets/img/frontend.png' %}"
+                                style="object-fit: cover;" alt="" loading="lazy">
+
+                            <p>6+ mentorlar TOP kompaniyalardan</p>
+                        </div>
+                        <button class="container__list__item__link" style="font-size:1.3rem;" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            +
+                        </button>
+                    </div>
+                    <div class="container__list__item">
+                        <h3 class="container__list__item__title">Back-end</h3>
+                        <ul class="container__list__item__frem">
+                            <li>
+                                <img src="{% static 'assets/img/jb_pycharm.png' %}" alt="" loading="lazy">
+                            </li>
+                            <li>
+                                <img src="{% static 'assets/img/python.png' %}" alt="" loading="lazy">
+                            </li>
+                            <li>
+                                <img src="{% static 'assets/img/git.png' %}" alt="" loading="lazy">
+                            </li>
+                            <li>
+                                <img src="{% static 'assets/img/linux.png' %}" alt="" loading="lazy">
+                            </li>
+                            <li>
+                                <img src="{% static 'assets/img/docker.png' %}" alt="" loading="lazy">
+                            </li>
+                        </ul>
+                        <div class="container__list__item__teach">
+                            <img class="container__list__item__teach__img1" src="{% static 'assets/img/backend.png' %}"
+                                style="object-fit: cover;" alt="" loading="lazy">
+                            <img class="container__list__item__teach__img2" src="{% static 'assets/img/backend.png' %}"
+                                style="object-fit: cover;" alt="" loading="lazy">
+                            <p>6+ mentorlar TOP kompaniyalardan</p>
+                        </div>
+                        <button class="container__list__item__link" style="font-size:1.3rem;" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            +
+                        </button>
+                    </div>
+                    <div class="container__list__item">
+                        <h3 class="container__list__item__title">3D</h3>
+
+                        <div class="container__list__item__teach">
+                            <img class="container__list__item__teach__img1" src="{% static 'assets/img/computer_foundation.png' %}"
+                                style="object-fit: cover;" alt="" loading="lazy">
+                            <img class="container__list__item__teach__img2" src="{% static 'assets/img/computer_foundation.png' %}"
+                                style="object-fit: cover;" alt="" loading="lazy">
+                            <p>2+ mentorlar TOP kompaniyalardan</p>
+                        </div>
+                        <button class="container__list__item__link" style="font-size:1.3rem;" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            +
+                        </button>
+                    </div>
+                    <div class="container__list__item">
+                        <h3 class="container__list__item__title">Dizayner</h3>
+
+                        <div class="container__list__item__teach">
+                            <img class="container__list__item__teach__img1" src="{% static 'assets/img/dizayn.png' %}"
+                                style="object-fit: cover;" alt="" loading="lazy">
+                            <img class="container__list__item__teach__img2" src="{% static 'assets/img/dizayn.png' %}"
+                                style="object-fit: cover;" alt="" loading="lazy">
+                            <p>2+ mentorlar TOP kompaniyalardan</p>
+                        </div>
+                        <button class="container__list__item__link" style="font-size:1.3rem;" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            +
+                        </button>
+                    </div>
+                    <div class="container__list__item">
+                        <h3 class="container__list__item__title">Marketing</h3>
+
+                        <div class="container__list__item__teach">
+                            <img class="container__list__item__teach__img1" src="{% static 'assets/img/marketing.png' %}"
+                                style="object-fit: cover;" alt="" loading="lazy">
+                            <img class="container__list__item__teach__img2" src="{% static 'assets/img/marketing.png' %}"
+                                style="object-fit: cover;" alt="" loading="lazy">
+                            <p>4+ mentorlar TOP kompaniyalardan</p>
+                        </div>
+                        <button class="container__list__item__link" style="font-size:1.3rem;" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            +
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- Kurs End -->
+
+
+        <!-- Test Start -->
+        <section class="test">
+            <div class="container">
+                <div class="container__list">
+                    <div class="container__list__left">
+                        <h3 class="container__list__left__title">Agar qaysi yo’nalishni tanlashni bilmasangiz <span>kasb
+                                aniqlovchi</span>testimizdan o’ting</h3>
+                        <button class="container__list__left__btn">
+                            <a href="https://wester-academy-quiz1.vercel.app/" target="_blank" style="color: white;">
+                                Testni boshlash
+                            </a>
+                        </button>
+                    </div>
+                    <div class="container__list__right">
+                        <img class="container__list__right__img" src="{% static 'assets/img/test-bc.png' %}" alt=""
+                            loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Test End -->
+
+
+        <!-- How Start -->
+        <section class="how">
+            <div class="container">
+                <div class="container__item">
+                    <div class="container__item__top">
+                        <img src="{% static 'assets/img/How.png' %}" alt="" loading="lazy">
+                    </div>
+                    <div class="container__item__left">
+                        <h3>IT da o‘zingiz uchun eng ma’qul kasb egasi bo‘ling
+                        </h3>
+                        <p>Bizning ekspertlar siz bilan suhbatlashish va 1 oy davomidagi tayyorlov kursi orqali siz
+                            uchun IT da mos keluvchi kasbni aniqlab berishadi</p>
+                        <p>Natijada sizda qobiliyatlaringizga qarab mos keluvchi zamonaviy kasb, yoqtirgan ishingiz
+                            bo‘ladi
+                        </p>
+                        <p>Quyidagi grafikda siz bu qanday ketma-ketlikda amalga oshishini ko‘rishingiz mumkin
+                        </p>
+                    </div>
+                    <div class="container__item__right">
+                        <img src="{% static 'assets/img/how_it_works.png' %}" alt="" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- How End -->
+
+        <!-- Saleriy Start -->
+        <section class="saleriy">
+            <div class="container">
+                <h2 class="container__title">Tajriba ortishi bilan maosh ortib boradi...</h2>
+                <h6 class="container__subtitle">Qanday ishlash mumkin va birinchi ishni qanday topiladi ?</h6>
+                <p class="container__text">Uydan yoki dunyoni istalgan nuqatasida turib ishlash mumkin.</p>
+                <p class="container__text">Ish o’rinlari ko’p va ular yildan yilga ortib bormoqda, hh.uz saytida
+                    tanlagan yo’nalishingiz uchun vakansiyalar mavjud.</p>
+                <p class="container__text">Bundan tashqari biz faol bitiruvchilarni suhbatga tayyorlaymiz va turli
+                    outsorsing kompaniyalarga suhbatga yo’naltiramiz.</p>
+                <h6 class="container__avarage">O’rtacha maosh</h6>
+                <p class="container__avaragedesc">Kurs oxirida siz intern hamda junior pozitsiyalariga ishga
+                    topshiringiz mumkin.</p>
+                <span class="container__link">Manba:<a target="_blank"
+                        href="https://tashkent.hh.uz/vacancies/programmist">hh.uz</a></span>
+                <ul class="container__list">
+                    <li class="container__list__item">
+                        <h3>$ 312,24</h3>
+                        <p>Junior</p>
+                    </li>
+                    <li class="container__list__item">
+                        <h3>$ 836,36</h3>
+                        <p>Middle</p>
+                    </li>
+                    <li class="container__list__item">
+                        <h3>$ 1 170,91</h3>
+                        <p>Senior</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- Saleriy End -->
+
+        <!-- Teacher Start -->
+        <section class="teachers">
+            <div class="container">
+                <div class="container__top">
+                    <h3 class="container__top__title">O‘z ishini ustalaridan bilim oling
+                    </h3>
+                    <span>
+                        <button id="prev" class="container__top__button">
+                            < </button>
+                                <button id="next" class="container__top__button">
+                                    >
+                                </button>
+                    </span>
+                </div>
+                <div class="slider-container">
+                    <ul class="slider-container__list">
+                        {% for w in workers %}
+                        <li class="slider-container__list__slider">
+                            <div class="slider-container__list__slider__obj">
+                                <img class="slider-container__list__slider__obj__img1" src="{{w.image.url}}"
+                                    alt="Teacher" loading="lazy">
+                                <img class="slider-container__list__slider__obj__img2" src="{{w.image1.url}}"
+                                    alt="Teacher" loading="lazy">
+                                <h4>{{w.name}} <br /> {{w.surname}}</h4>
+                                <p>{{w.technology}}</p>
+                            </div>
+                        </li>
+                        {% endfor %}
+
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+        <!-- Teacher End -->
+
+
+        <!-- About-video Start -->
+        <section class="video">
+            <div class="container">
+                <div class="container__objs">
+                    <iframe 
+                        class="container__objs__video" 
+                        width="100%" 
+                        height="452"
+                        src="{{ourvideo.video}}"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen
+                        >
+                    </iframe>
+                </div>
+            </div>
+        </section>
+        <!-- About-video End -->
+
+
+
+
+        <!-- Review Start -->
+        <section id="review" class="review">
+            <div class="container">
+                <h3 class="container__title">
+                    Bizni tanlaganlarni fikri
+                </h3>
+
+                <ul class="container__items" id="dataList">
+                    {% for v in video %}
+                    <li>
+
+                        <video class="video" muted autoplay controls>
+                            <source autoplay src="{{v.video.url}}" type="video/mp4">
+                        </video>
+
+                        <p class="name">{{v.name}}</p>
+                    </li>
+                    {% endfor %}
+                </ul>
+
+            </div>
+        </section>
+        <!-- Review End -->
+
+        <!-- Collaborator Start -->
+        <section id="client" class="collaborator">
+            <div class="container">
+                <h2 class="container__title">Vodiydagi ilg‘or kompaniyalar bilan hamkorlik qilamiz
+                </h2>
+                <p class="container__text">Eng yaxshi ish o’rinlarini to’playmiz va intervyuga tayyorlaymiz ,
+                    hamkorlarga yo’naltiramiz</p>
+                <ul class="container__list">
+                    {% for s in sponsor %}
+                    <li class="container__list__img">
+                        <img src="{{s.image.url}}" alt="" loading="lazy">
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </section>
+        <!-- Collaborator End -->
+
+        <!-- Faq Start -->
+        <section class="faq">
+            <div class="container">
+                <h2 class="container__title">Savol javoblar</h2>
+                <div class="accordion" id="faqAccordion">
+                    {% for f in faq %}
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo{{f.id}}">
+                            <button class="butt collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo{{f.id}}" aria-expanded="false"
+                                aria-controls="collapseTwo{{f.id}}">
+                               <span>{{f.title}}</span>
+                                <p>+</p>
+                            </button>
+                        </h2>
+                        <div id="collapseTwo{{f.id}}" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                {{f.answer}}
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+        <!-- Faq End -->
+
+    </main>
+
+    <audio id="myAudio">
+        <source src="{% static 'assets/img/voice/voice.mp3' %}" type="audio/mp3">
+        Ваш браузер не поддерживает аудио тег.
+    </audio>
+    <button class="voice">
+        <p class="textvoice">Biz haqimizda sun'iy intellekt nima deydi ?</p>
+        <img class="voice__img actVoice" src="{% static 'assets/img/voice/voice.png' %}" alt="">
+        <img class="voice__video"
+            src="https://cdn.dribbble.com/users/407851/screenshots/2718256/media/cd1bea24bdc2b82e6916458f3eea9ce6.gif"
+            alt="">
+    </button>
+
+    <!-- scroll-up Start -->
+    <div class="scroll-up">
+        <svg class='scroll-up__svg' viewBox='-2 -2 52 52'>
+            <path class='scroll-up__svg__path' d='
+              M24,0
+              a24,24, 0 0,1 0, 48
+              a24,24, 0 0,1 0, -48
+            ' />
+        </svg>
+    </div>
+    <!-- scroll-up End -->
+
+
+    <!-- Footer Start -->
+    <footer class="footer">
+        <div class="container">
+            <div class="container__logo">
+                <a href="#">
+                    <img src="{% static 'assets/img/11111.png' %}" alt="logo" loading="lazy">
+                </a>
+            </div>
+            <div class="container__list">
+                <nav class="container__list__nav">
+                    <ul class="container__list__nav__list">
+                        <li class="container__list__nav__list__item">
+                            <div class="container__list__nav__list__item__number">
+                                <a href="tel:998555009010"><img src="{% static 'assets/img/phone.svg' %}" alt=""> +998
+                                    55-500-90-10</a>
+                            </div>
+                            <p>Call center</p>
+                        </li>
+                        <li class="container__list__nav__list__item">
+                            <div class="container__list__nav__list__item__number">
+                                <a href="tel:998932609010"><img src="{% static 'assets/img/phone.svg' %}" alt=""> +998
+                                    93-260-90-10</a>
+                            </div>
+                            <p>O’quv bo’limi</p>
+                        </li>
+                    </ul>
+                    <p class="container__list__nav__p">© Wester IT Academy, 2023</p>
+                </nav>
+                <div class="container__list__center">
+                    <a href="https://maps.app.goo.gl/tvCs6rvoafttX5bZ9" target="_blank" style="color: #ffffff;">
+                        <img src="{% static 'assets/img/location.svg' %}" alt="">
+                        <p>Andijon shahar Cho’lponshox ko’chasi 26-uy</p>
+                    </a>
+                    <p>support@westeracademy.uz</p>
+                </div>
+                <ul class="container__list__link">
+                    <li class="container__list__link__item">
+                        <a target="_blank" href="https://www.instagram.com/wester_academy?igshid=OGQ5ZDc2ODk2ZA%3D%3D">
+                            <img src="{% static 'assets/img/instagram.svg' %}" alt="instagram">
+                        </a>
+                    </li>
+                    <li class="container__list__link__item">
+                        <a target="_blank" href="https://t.me/wester_academy">
+                            <img src="{% static 'assets/img/telagram.svg' %}" alt="telegram">
+                        </a>
+                    </li>
+                    <li class="container__list__link__item">
+                        <a target="_blank" href="https://youtube.com/@westerschool?si=avpzgfcMlurJ0Sn1
+                        ">
+                            <img src="{% static 'assets/img/youtube.svg' %}" alt="youtube">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- JS -->
+    <script src="{% static 'assets/js/index.js' %}"></script>
+    <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+
+    <!-- <script>
+        function submitForm() {
+            var formData = {
+                course: $(".course-btn.active").val(),
+                name: $("input[name='name']").val(),
+                phone: $("input[name='phone']").val(),
+                age: $("input[name='age']").val(),
+            };
+    
+            var queryString = $.param(formData);
+    
+            window.location.href = $("#myForm").attr("action") + "?" + queryString;
+        }
+    
+        $(".modal-body__from__div button").click(function () {
+            $(this).addClass("active").siblings().removeClass("active");
+        });
+
+    </script> -->
+    <script>
+        $(document).ready(function () {
+            $(".course-btn").click(function () {
+                $(this).addClass("active").siblings().removeClass("active");
+            });
+
+            $("#myForm").submit(function () {
+                // Set the value of the active button to a hidden input
+                $("<input>").attr({
+                    "type": "hidden",
+                    "name": "course",
+                    "value": $(".course-btn.active").val()
+                }).appendTo("#myForm");
+
+                // You can do additional processing or validation here before submitting the form
+                return true; // Allow the default form submission
+            });
+        });
+    </script>
+
+</body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5LJBPD4Q" height="0" width="0"
+        style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+</html>

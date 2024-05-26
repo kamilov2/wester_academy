@@ -1,0 +1,86 @@
+@import "../utilities/variables";
+
+.footer {
+    padding: 50px 0;
+    background-color: $black;
+
+    .container {
+        &__list {
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            &__nav {
+                &__list {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 400px;
+
+                    &__item {
+                        &__number {
+                            a {
+                                color: $white;
+                                font-size: 1.2rem;
+                                font-weight: 400
+                            }
+                        }
+
+                        p {
+                            color: $white;
+                            font-size: 12px;
+                            font-weight: 400;
+                            margin-top: .7rem;
+                        }
+                    }
+                }
+
+                &__p {
+                    color: #FFFFFFA6;
+                    font-size: 12px;
+                    font-weight: 400;
+                }
+            }
+
+            &__center {
+                margin-top: 1rem;
+
+                p {
+                    color: $white;
+                    font-size: 14px;
+                    font-weight: 400;
+                }
+            }
+
+            &__link {
+                margin-top: 1rem;
+                width: 150px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                &__item {
+                    a {
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 430px) {
+    .footer {
+        .container {
+            &__list {
+                &__nav {
+                    &__list {
+                        width: 95%;
+                        flex-wrap: wrap;
+                    }
+                }
+            }
+        }
+    }
+}

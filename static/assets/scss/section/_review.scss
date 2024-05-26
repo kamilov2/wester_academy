@@ -1,0 +1,135 @@
+@import "../utilities/variables";
+
+.review {
+    padding-bottom: 30px;
+
+    .container {    
+        &__title {
+            text-align: center;
+            font-size: 48px;
+            font-weight: 500;
+            margin-bottom: 2rem;
+        }
+
+        &__items {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            li {
+                margin-bottom: 2rem;
+                width: 268px;
+                height: 426px;
+                border-radius: 1rem;
+                background-color: $black;
+                position: relative;
+
+                .icon {
+                    position: absolute;
+                    top: .8rem;
+                    left: .8rem;
+                    z-index: 99;
+                    width: 35px;
+                    height: 35px;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: $white;
+                }
+
+                .video {
+                    width: 268px;
+                    height: 426px;
+                    border-radius: 1rem;
+                    object-fit: cover;
+                }
+
+                .name {
+                    position: absolute;
+                    bottom: 1rem;
+                    right: 1rem;
+                    background-color: $white;
+                    border-radius: 1rem;
+                    padding: .3rem 1rem;
+                    font-weight: 600;
+                }
+            }
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+
+            li {
+                margin-right: 5px;
+            }
+
+            button {
+                padding: 5px 10px;
+                border: 1px solid #ccc;
+                border-radius: 3px;
+                background-color: $white;
+                color: $black;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #eee;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+    .review {
+        .container {
+            &__items {
+                justify-content: space-evenly;
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 767px) {
+    .review {
+        .container {
+            &__title {
+                font-size: 30px;
+            }
+
+            &__items {
+                    li {
+                        width: 100%;
+
+                        .video {
+                            width: 100%;
+                            height: 426px;
+                            border-radius: 1rem;
+                        }
+                    }
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 545px) {
+    .review {
+        .container {
+            &__title {
+                font-size: 25px;
+            }
+
+            &__items {
+                li {
+                    width: 90%;
+                }
+            }
+        }
+    }
+}

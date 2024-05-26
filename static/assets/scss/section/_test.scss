@@ -1,0 +1,175 @@
+@import "../../scss/utilities/variables";
+
+.test {
+    padding-bottom: 70px;
+
+    .container {
+
+        &__list {
+            background: linear-gradient(264deg, #4BD0A0 30.9%, #cefaeb 79.77%);
+            border-radius: 1.7rem;
+            padding: 1.7rem;
+            height: 350px;
+            display: flex;
+            align-items: center;
+            position: relative;
+
+            &__left {
+                width: 50%;
+
+                &__title {
+                    font-size: 44px;
+                    line-height: 52px;
+                    font-weight: 500;
+
+                    span {
+                        width: 390px;
+                        padding: .3rem 1rem;
+                        display: block;
+                        background-color: $white;
+                        border-radius: 1rem;
+                        font-size: 44px;
+                        line-height: 52px;
+                        font-weight: 500;
+                    }
+                }
+
+                &__btn {
+                    text-align: center;
+                    display: block;
+                    width: 250px;
+                    margin-top: 2rem;
+                    padding: .5rem 0;
+                    color: $white;
+                    background-color: $black;
+                    border: transparent;
+                    border-radius: .5rem;
+                }
+            }
+
+            &__right {
+                position: absolute;
+                right: 0;
+                background-image: url("../../img/test-bc1.png");
+                background-repeat: no-repeat;
+                background-position: right top;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+    .test {
+        .container {
+            &__list {
+                &__left {
+                    width: 50%;
+
+                    &__title {
+                        font-size: 40px;
+
+                        span {
+                            font-size: 40px;
+                        }
+                    }
+
+                    &__btn {
+                        margin-top: 1.9rem;
+                    }
+                }
+
+                &__right {
+                    position: absolute;
+                    right: 0;
+                    background-image: url("../../img/test-bc1.png");
+                    background-repeat: no-repeat;
+                    background-position: right top;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .test {
+        padding-bottom: 30px;
+        .container {
+            &__list {
+                &__left {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    background-image: url("../../img/test-bc1.png");
+                    background-repeat: no-repeat;
+                    background-position: left;
+
+                    &__title {
+                        font-size: 40px;
+                        text-align: center;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: column;
+
+                        span {
+                            font-size: 40px;
+                            text-align: center;
+                        }
+                    }
+
+                    &__btn {
+                        text-align: center;
+                        margin-top: 1.9rem;
+                    }
+                }
+
+                &__right {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .test {
+        .container {
+            &__list {
+                &__left {
+                    &__title {
+                        font-size: 1.8rem;
+                        span {
+                            width: 300px;
+                            padding: .1rem;
+                            font-size: 1.8rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 382px) {
+    .test {
+        .container {
+            &__list {
+                &__left {
+                    &__title {
+                        font-size: 1.4rem;
+                        span {
+                            width: 250px;
+                            font-size: 1.4rem;
+                        }
+                    }
+                    &__btn{
+                        width: 90%;
+
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,1 @@
+from wester.wsgi import application

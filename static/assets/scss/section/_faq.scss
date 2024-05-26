@@ -1,0 +1,50 @@
+@import "../utilities/variables";
+
+.faq {
+    padding-bottom: 70px;
+
+    .container {
+        &__title {
+            text-align: center;
+            font-size: 45px;
+            font-weight: 500;
+            color: $black;
+            margin-bottom: 3rem;
+        }
+
+        .butt {
+            color: $black;
+            background-color: $white;
+            border: none;
+            height: 70px;
+            width: 100%;
+            text-align: start;
+            padding-left: 1rem;
+            border-bottom: 1px solid $gray;
+            font-size: 19px;
+            font-weight: 500;
+            line-height: 24px;
+            letter-spacing: 0em;
+            text-align: left;
+        }
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .faq {
+        padding-bottom: 40px;
+
+        .container {
+            &__title {
+                font-size: 35px;
+                margin-bottom: 2rem;
+            }
+        }
+    }
+}
+
+.myActivee {
+    color: $white !important;
+    background-color: $black !important;
+    outline: none;
+}
