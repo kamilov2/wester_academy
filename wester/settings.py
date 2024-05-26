@@ -224,15 +224,15 @@ USE_TZ = True
 # MEDIA_URL = '/media/'
 # MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'staticfiles'),  
-]
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, 'staticfiles'),  
+# ]
 
 
-STATIC_URL = '/wester/static/'
-STATIC_ROOT = '/home/westera1/wester/static/'
+STATIC_URL = '/wester_academy/static/'
+STATIC_ROOT = '/home/westera1/wester_academy/static/'
 MEDIA_URL = '/wester/media/'
-MEDIA_ROOT = '/home/westera1/wester/media/'
+MEDIA_ROOT = '/home/westera1/wester_academy/media/'
 
 
 # Default primary key field type
