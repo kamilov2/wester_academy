@@ -9,7 +9,7 @@ import telebot
 
 
 
-token = "6437000160:AAHaWYZw_kAKnqUnmyh3FWQlGP_aYs5NY6Y"
+token = "7241155398:AAFXcoUeaSpCxftOhqanm90GL6EQ-G4GCzU"
 bot = telebot.TeleBot(token)
 
 class HomePageView(View):
@@ -43,7 +43,7 @@ class CreateStudentView(View):
                 age_str = int(age)
                 if 9 <= age_str <= 30:
                     RegisterStudent.objects.create(field_of_study=course, name=name, phone_number=phone, age=age)
-                    user_id = '-1002119623085'
+                    user_id = '--4271050685'
                     message_text = (
     f"""
 #kurs: {course}\n
