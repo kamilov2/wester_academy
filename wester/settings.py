@@ -229,10 +229,12 @@ USE_TZ = True
 # ]
 
 
-STATIC_URL = '/wester_academy/static/'
-STATIC_ROOT = '/home/westera1/wester_academy/static/'
-MEDIA_URL = '/wester_academy/media/'
-MEDIA_ROOT = '/home/westera1/wester_academy/media/'
+STATIC_URL = "/static/"
+STATICFILES_DIRS = [BASE_DIR / "staticfiles"]
+STATIC_ROOT = BASE_DIR / "static"
+
+MEDIA_URL = "/media/"
+MEDIA_ROOT = BASE_DIR / "media"
 
 
 # Default primary key field type
